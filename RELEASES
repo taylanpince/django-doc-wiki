@@ -1,0 +1,8 @@
+0.1.0BETA (January 19, 2010)
+============================
+
+* Automated updating, deletion of objects based on document timestamps
+
+* Management command for adding new files to the index
+
+* Markdown, Pygments support using a cached version of the content

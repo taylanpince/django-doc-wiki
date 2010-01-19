@@ -1,0 +1,8 @@
+Django Doc Wiki
+===============
+
+This is an extremely simple, document based wiki that can read and update
+its contents from a given directory. It's meant to be used with a source 
+control system that version the files separately. Currently no web editing
+interface is included, it's just an easy way of displaying a bunch of markdown
+formatted files in a directory.

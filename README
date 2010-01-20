@@ -28,8 +28,8 @@ Planned features for the next releases:
 Installation
 ------------
 
-Simple include 'doc_wiki' in your INSTALLED_APPS to enable it. Add an entry to
-your `urls.py` to enable it under any path:
+Simply include 'doc_wiki' in your INSTALLED_APPS to enable it. Add an entry to
+your `urls.py` to add it under any path:
 
     (r'', include('doc_wiki.urls')),
 

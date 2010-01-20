@@ -23,3 +23,15 @@ Planned features for the next releases:
 
 - Editing and adding new files, pushing them to the repository (only Git will
   be supported)
+
+
+Installation
+------------
+
+Simple include 'doc_wiki' in your INSTALLED_APPS to enable it. Add an entry to
+your `urls.py` to enable it under any path:
+
+    (r'', include('doc_wiki.urls')),
+
+To determine where it should read its content from, use the DOC_WIKI_DIRECTORY_PATH
+parameter in your `settings.py`.

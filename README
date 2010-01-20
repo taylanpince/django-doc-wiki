@@ -3,6 +3,23 @@ Django Doc Wiki
 
 This is an extremely simple, document based wiki that can read and update
 its contents from a given directory. It's meant to be used with a source 
-control system that version the files separately. Currently no web editing
+control system that versions the files separately. Currently no web editing
 interface is included, it's just an easy way of displaying a bunch of markdown
 formatted files in a directory.
+
+Its features include:
+
+- Detect new files (through a cron job, script included) and updates to 
+  existing ones, remove deleted files
+
+- Support for Markdown formatting, SmartyPants and Pygments syntax highlighting
+  (Markdown and SmartyPants included, Pygments should be installed separately)
+
+Planned features for the next releases:
+
+- Support for subdirectories
+
+- Displaying additional version data per file
+
+- Editing and adding new files, pushing them to the repository (only Git will
+  be supported)

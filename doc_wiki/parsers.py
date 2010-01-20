@@ -40,7 +40,7 @@ class CodeBlockPreprocessor(TextPreprocessor):
         :copyright: 2007 by Jochen Kupperschmidt.
         :license: BSD, see LICENSE for more details.
     """
-    pattern = re.compile(r'@@ (.+?)\r\n(.+?)\r\n@@ end', re.S)
+    pattern = re.compile(r'@@ (.+?)\n(.+?)\n@@ end', re.S)
     
     formatter = HtmlFormatter(noclasses=False)
     

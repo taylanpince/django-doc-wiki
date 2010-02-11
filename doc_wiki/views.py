@@ -1,4 +1,4 @@
-from django.http import Http404
+from django.http import Http404, HttpResponse
 from django.shortcuts import render_to_response
 from django.template import RequestContext
 
@@ -28,3 +28,20 @@ def wiki_page(request, slug):
     return render_to_response("doc_wiki/page.html", {
         "page": page,
     }, context_instance=RequestContext(request))
+
+
+def wiki_page_source(request, slug):
+    """
+    Returns the source document of a wiki page
+    """
+    try:
+        page = WikiPage.objects.get(slug=slug)
+    except WikiPage.DoesNotExist:
+        raise Http404
+    
+    response = HttpResponse(mimetype="text")
+    response["Content-Disposition"] = "attachment; filename=%s" % slug
+
+    response.write(page.content)
+
+    return response
